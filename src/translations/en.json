@@ -1,0 +1,5 @@
+{
+  "app.containers.Fitness.delete": "Delete",
+  "app.containers.Fitness.header": "Fitness",
+  "app.containers.Fitness.weight": "Weight"
+}

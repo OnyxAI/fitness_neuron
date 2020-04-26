@@ -1,0 +1,27 @@
+{
+  "name": "Fitness",
+  "raw_name": "fitness",
+  "routes": [
+    {
+      "url": "/fitness",
+      "name": "Fitness",
+      "default": "true",
+      "raw": "fitness",
+      "icon": "fas fa-heartbeat"
+    }
+  ],
+  "widgets": [
+    {
+      "beautifulName": "Fitness Weight",
+      "name": "WeightWidget",
+      "raw": "fitness"
+    }
+  ],
+  "screen": [
+    {
+      "beautifulName": "Fitness Weight",
+      "name": "WeightWidget",
+      "raw": "fitness"
+    }
+  ]
+}
