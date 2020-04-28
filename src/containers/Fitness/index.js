@@ -114,7 +114,7 @@ export function Fitness({ user, getWeightFunc, addWeightFunc, deleteWeightFunc, 
   );
 }
 
-export function WeightWidgetComponent({ user, deleteWidget, getWeightFunc, fitness }) {
+export function WeightWidgetComponent({ user, getWeightFunc, fitness }) {
   useInjectReducer({ key: 'fitness', reducer });
   useInjectSaga({ key: 'fitness', saga });
 
@@ -155,18 +155,11 @@ export function WeightWidgetComponent({ user, deleteWidget, getWeightFunc, fitne
 
   return (
     <div>
-      <Helmet>
-        <title>Fitness</title>
-        <meta name="description" content="Description of Fitness" />
-      </Helmet>
-      <Widget user={user} delete={() => deleteWidget()} title={<FormattedMessage {...messages.header} />}>
         {fitness && (
           <div style={{width: '35vh', height: '40vh'}}>
-
             <CanvasJSChart options={fitness.weights && getOptions(fitness.weights)} />
           </div>
         )}
-      </Widget>
     </div>
   );
 }
