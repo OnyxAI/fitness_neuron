@@ -114,7 +114,7 @@ export function Fitness({ user, getWeightFunc, addWeightFunc, deleteWeightFunc, 
   );
 }
 
-export function WeightWidgetComponent({ user, getWeightFunc, fitness }) {
+export function WeightWidgetComponent({ user, getWeightFunc, fitness, ...props }) {
   useInjectReducer({ key: 'fitness', reducer });
   useInjectSaga({ key: 'fitness', saga });
 
@@ -154,13 +154,13 @@ export function WeightWidgetComponent({ user, getWeightFunc, fitness }) {
   }
 
   return (
-    <div>
+    <Widget className='uk-card uk-card-default uk-card-body' style={props.style}>
         {fitness && (
           <div style={{width: '35vh', height: '40vh'}}>
             <CanvasJSChart options={fitness.weights && getOptions(fitness.weights)} />
           </div>
         )}
-    </div>
+    </Widget>
   );
 }
 
